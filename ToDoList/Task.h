@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSInteger priority;
 @property NSInteger status;
 
-//-(void) setName:(NSString*)name withDescription:(NSString*)description andDate:(NSDate*)date andPriority:(NSInteger)priority;
 @end
 
 NS_ASSUME_NONNULL_END

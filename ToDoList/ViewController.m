@@ -27,35 +27,34 @@
 
     avc.p = self;
     [self.navigationController pushViewController:avc animated:YES];
-//    [self presentViewController:avc animated:YES completion:nil];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _isFiltered = false;
-    self.searchBarField.delegate = self;
+//    _isFiltered = false;
+//    self.searchBarField.delegate = self;
     _toDoTable.delegate = self;
     _toDoTable.dataSource = self;
     
 }
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    if(searchText.length == 0){
-        _isFiltered = false;
-    }else{
-        _isFiltered = true;
-        _filteredTasks=[NSMutableArray new];
-        for (int i = 0; i< [_tasks count]; i++) {
-            Task *tmp = _tasks[i];
-            if([ searchText isEqualToString:tmp.name] || [tmp.name containsString:searchText]){
-                _isFiltered = true;
-                [_filteredTasks addObject:tmp];
-            }
-//            NSRange *nameRange = [tmp.name rangeOfString:searchText options:NSCaseInsensitiveSearch];
-        }
-    }
-}
+//- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+//    if(searchText.length == 0){
+//        _isFiltered = false;
+//    }else{
+//        _isFiltered = true;
+//        _filteredTasks=[NSMutableArray new];
+//        for (int i = 0; i< [_tasks count]; i++) {
+//            Task *tmp = _tasks[i];
+//            if([ searchText isEqualToString:tmp.name] || [tmp.name containsString:searchText]){
+//                _isFiltered = true;
+//                [_filteredTasks addObject:tmp];
+//            }
+////            NSRange *nameRange = [tmp.name rangeOfString:searchText options:NSCaseInsensitiveSearch];
+//        }
+//    }
+//}
 -(void)viewWillAppear:(BOOL)animated{
     _tasks = [[self readArrayWithCustomObjFromUserDefaults:@"todoTasks"]mutableCopy];
     [_toDoTable reloadData];
@@ -97,12 +96,12 @@
    return 110;
 }
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if(_isFiltered){
-        return [_filteredTasks count];
-    }else
-    {
+//    if(_isFiltered){
+//        return [_filteredTasks count];
+//    }else
+//    {
         return [_tasks count];
-    }
+    //}
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -190,7 +189,6 @@
                         if([tkE.name isEqual:task.name] || [tkE.descrip isEqual:task.descrip]){
                             [pvc.tasksP removeObject:task];
                             [pvc.tasksP addObject:tkE];
-                            
                             [self writeArrayWithCustomObjToUserDefaults:@"progressTasks" withArray:pvc.tasksP];
                             [pvc.self reload];
                         }

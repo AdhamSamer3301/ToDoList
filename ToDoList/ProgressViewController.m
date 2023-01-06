@@ -111,24 +111,36 @@
     DoneViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"done"];
     switch (tkE.status) {
         case 0:
-            vc.tasks = [[self readArrayWithCustomObjFromUserDefaults:@"progressTasks"] mutableCopy];
+            vc.tasks = [[self readArrayWithCustomObjFromUserDefaults:@"todoTasks"] mutableCopy];
+            if([vc.tasks count]==0||vc.tasks == nil){
+                vc.tasks = [NSMutableArray new];
+                [vc.tasks addObject:tkE];
+                [self writeArrayWithCustomObjToUserDefaults:@"todoTasks" withArray:vc.tasks];
+                [vc.self reload];
+                [_tasksP removeObject:tkE];
+                [self writeArrayWithCustomObjToUserDefaults:@"progressTasks" withArray:_tasksP];
+                
+            }else{
                 for (int i =0;i<[vc.tasks count];i++) {
                     Task *task = vc.tasks[i];
                     if(task !=nil){
                         if([tkE.name isEqual:task.name] || [tkE.descrip isEqual:task.descrip]){
                             [vc.tasks removeObject:task];
                             [vc.tasks addObject:tkE];
-                            
-                            [self writeArrayWithCustomObjToUserDefaults:@"progressTasks" withArray:vc.tasks];
+                            [self writeArrayWithCustomObjToUserDefaults:@"todoTasks" withArray:vc.tasks];
                             [vc.self reload];
                         }
                         else{
                             [vc.tasks addObject:tkE];
-                            [self writeArrayWithCustomObjToUserDefaults:@"progressTasks" withArray:vc.tasks];
+                            [self writeArrayWithCustomObjToUserDefaults:@"todoTasks" withArray:vc.tasks];
                             [vc.self reload];
+                            [_tasksP removeObject:tkE];
+                            [self writeArrayWithCustomObjToUserDefaults:@"progressTasks" withArray:_tasksP];
                         }
                     }
                 }
+            }
+            
             break;
         case 1:
             if(_tasksP==nil){
