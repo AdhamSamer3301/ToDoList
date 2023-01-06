@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE195CDF29658077009EF406 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE195CDE29658077009EF406 /* TableViewCell.m */; };
 		DE45BE182965698E00407174 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45BE172965698E00407174 /* AppDelegate.m */; };
 		DE45BE1B2965698E00407174 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45BE1A2965698E00407174 /* SceneDelegate.m */; };
 		DE45BE1E2965698E00407174 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45BE1D2965698E00407174 /* ViewController.m */; };
@@ -17,6 +18,11 @@
 		DE45BE332965699100407174 /* ToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45BE322965699100407174 /* ToDoListTests.m */; };
 		DE45BE3D2965699200407174 /* ToDoListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45BE3C2965699200407174 /* ToDoListUITests.m */; };
 		DE45BE3F2965699200407174 /* ToDoListUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45BE3E2965699200407174 /* ToDoListUITestsLaunchTests.m */; };
+		DE45BE4D29656B8800407174 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45BE4C29656B8800407174 /* ProgressViewController.m */; };
+		DE45BE5029656B9500407174 /* DoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45BE4F29656B9500407174 /* DoneViewController.m */; };
+		DE45BE5329656BA400407174 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45BE5229656BA400407174 /* AddViewController.m */; };
+		DE45BE5629656BAF00407174 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45BE5529656BAF00407174 /* EditViewController.m */; };
+		DE45BE5929656DCF00407174 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45BE5829656DCF00407174 /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE195CDD29658077009EF406 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		DE195CDE29658077009EF406 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		DE195CE029659240009EF406 /* MyProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyProtocol.h; sourceTree = "<group>"; };
 		DE45BE132965698E00407174 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE45BE162965698E00407174 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DE45BE172965698E00407174 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +63,16 @@
 		DE45BE382965699200407174 /* ToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE45BE3C2965699200407174 /* ToDoListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListUITests.m; sourceTree = "<group>"; };
 		DE45BE3E2965699200407174 /* ToDoListUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListUITestsLaunchTests.m; sourceTree = "<group>"; };
+		DE45BE4B29656B8800407174 /* ProgressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
+		DE45BE4C29656B8800407174 /* ProgressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
+		DE45BE4E29656B9500407174 /* DoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoneViewController.h; sourceTree = "<group>"; };
+		DE45BE4F29656B9500407174 /* DoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoneViewController.m; sourceTree = "<group>"; };
+		DE45BE5129656BA400407174 /* AddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		DE45BE5229656BA400407174 /* AddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		DE45BE5429656BAF00407174 /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		DE45BE5529656BAF00407174 /* EditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		DE45BE5729656DCF00407174 /* Task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		DE45BE5829656DCF00407174 /* Task.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +130,23 @@
 				DE45BE1C2965698E00407174 /* ViewController.h */,
 				DE45BE1D2965698E00407174 /* ViewController.m */,
 				DE45BE1F2965698E00407174 /* Main.storyboard */,
+				DE195CE029659240009EF406 /* MyProtocol.h */,
 				DE45BE222965699000407174 /* Assets.xcassets */,
 				DE45BE242965699000407174 /* LaunchScreen.storyboard */,
 				DE45BE272965699000407174 /* Info.plist */,
 				DE45BE282965699000407174 /* main.m */,
+				DE45BE4B29656B8800407174 /* ProgressViewController.h */,
+				DE45BE4C29656B8800407174 /* ProgressViewController.m */,
+				DE45BE4E29656B9500407174 /* DoneViewController.h */,
+				DE45BE4F29656B9500407174 /* DoneViewController.m */,
+				DE45BE5129656BA400407174 /* AddViewController.h */,
+				DE45BE5229656BA400407174 /* AddViewController.m */,
+				DE45BE5429656BAF00407174 /* EditViewController.h */,
+				DE45BE5529656BAF00407174 /* EditViewController.m */,
+				DE45BE5729656DCF00407174 /* Task.h */,
+				DE45BE5829656DCF00407174 /* Task.m */,
+				DE195CDD29658077009EF406 /* TableViewCell.h */,
+				DE195CDE29658077009EF406 /* TableViewCell.m */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -266,9 +298,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE45BE5029656B9500407174 /* DoneViewController.m in Sources */,
+				DE45BE4D29656B8800407174 /* ProgressViewController.m in Sources */,
 				DE45BE1E2965698E00407174 /* ViewController.m in Sources */,
+				DE195CDF29658077009EF406 /* TableViewCell.m in Sources */,
+				DE45BE5329656BA400407174 /* AddViewController.m in Sources */,
+				DE45BE5629656BAF00407174 /* EditViewController.m in Sources */,
 				DE45BE182965698E00407174 /* AppDelegate.m in Sources */,
 				DE45BE292965699000407174 /* main.m in Sources */,
+				DE45BE5929656DCF00407174 /* Task.m in Sources */,
 				DE45BE1B2965698E00407174 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
